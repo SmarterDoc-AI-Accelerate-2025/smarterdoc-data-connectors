@@ -353,7 +353,6 @@ def query_seed_doctors(
 
     sql = f"""
     -- Query pulls doctors from NPI table, filtered by recency, state, and specialty
-    -- NOTE: Removing complex JSON extraction for address, relying on LLM to find it.
     WITH base AS (
       SELECT
         t1.npi,
@@ -364,11 +363,17 @@ def query_seed_doctors(
         t1.state,
         t1.zip,
         t1.last_updated_at
-        -- Removed: address_line_1, address_line_2, phone JSON extractions
       FROM `{project}.{dataset}.{npi_table}` AS t1
       WHERE t1.state = @state
         AND t1.primary_specialty IN ({specialties_list})
         AND (t1.last_updated_at IS NULL OR t1.last_updated_at >= @since)
+        
+        -- START FIX: Filter out records without a usable name
+        AND (
+            (t1.first_name IS NOT NULL AND TRIM(t1.first_name) != '')
+            OR (t1.last_name IS NOT NULL AND TRIM(t1.last_name) != '')
+        )
+        -- END FIX
     )
     SELECT *
     FROM base

@@ -1,20 +1,24 @@
 {
+  "gcp_project": "practical-actor-473818-e5",
+  "bq_project": "practical-actor-473818-e5",
+  "bq_dataset": "raw",
+  "state_filter": "NY",
   "api_base": "https://npiregistry.cms.hhs.gov/api/",
   "page_size": "200",
   "request_timeout_seconds": "30",
   "request_backoff_seconds": "0.25",
   "max_pages_per_sync": "20",
-  "zip_prefixes": [
-    "100",
-    "101",
-    "102",
-    "103",
-    "104",
-    "111",
-    "112",
-    "113",
-    "114",
-    "116"
-  ],
-  "taxonomy_codes": ["207VE0102X", "207X00000X"]
+  "postal_prefixes": "100,101,102,103,104,111,112,113,114,116",
+  "taxonomy_codes": "207VE0102X,207X00000X",
+  "bq_npi_table": "npi_providers",
+  "bq_profile_table": "doctor_profiles",
+  "summary_model": "gemini-2.5-flash",
+  "specialties": "Reproductive Endocrinology,Orthopaedic Surgery",
+  "updated_since_days": "30",
+  "max_doctors_per_sync": "150",
+  "gcp_location": "us-central1",
+  "embedding_model": "gemini-embedding-001",
+  "vector_attribute_name": "embedding",
+  "embedding_dimension": "3072",
+  "batch_size": "50"
 }

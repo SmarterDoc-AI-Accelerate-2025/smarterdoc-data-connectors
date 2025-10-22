@@ -402,7 +402,7 @@ connector = Connector(update=update, schema=schema)
 
 if __name__ == "__main__":
     try:
-        with open("../main-configuration.json", "r") as f:
+        with open("configuration.json", "r") as f:
             cfg = json.load(f)
     except FileNotFoundError:
         cfg = {}

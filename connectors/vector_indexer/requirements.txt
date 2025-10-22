@@ -1,0 +1,4 @@
+pydantic
+google-cloud-bigquery
+google-genai
+google-cloud-aiplatform
