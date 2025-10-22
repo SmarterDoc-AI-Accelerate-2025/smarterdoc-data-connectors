@@ -1,0 +1,13 @@
+{
+  "bq_project": "practical-actor-473818-e5",
+  "bq_dataset": "raw",
+  "bq_npi_table": "npi_providers",
+  "gcp_project": "practical-actor-473818-e5",
+  "gcp_location": "us-central1",
+  "summary_model": "gemini-2.5-flash",
+  "embedding_model": "gemini-embedding-001",
+  "state_filter": "NY",
+  "specialties": ["Reproductive Endocrinology", "Orthopaedic Surgery"],
+  "updated_since_days": "30",
+  "max_doctors_per_sync": "150"
+}

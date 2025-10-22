@@ -1,0 +1,20 @@
+{
+  "api_base": "https://npiregistry.cms.hhs.gov/api/",
+  "page_size": "200",
+  "request_timeout_seconds": "30",
+  "request_backoff_seconds": "0.25",
+  "max_pages_per_sync": "20",
+  "zip_prefixes": [
+    "100",
+    "101",
+    "102",
+    "103",
+    "104",
+    "111",
+    "112",
+    "113",
+    "114",
+    "116"
+  ],
+  "taxonomy_codes": ["207VE0102X", "207X00000X"]
+}

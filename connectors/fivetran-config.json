@@ -1,0 +1,9 @@
+{
+  "fivetran_api_key": "ft_RtH75jHz08GbW",
+  "fivetran_api_secret": "Tir0bsLbyi1q0yIATNjZYwxpgRA0XCX5",
+  "Base64-encoded API Key": "ZnRfUnRINzVqSHowOEdiVzpUaXIwYnNMYnlpMXEweUlBVE5qWll3eHBnUkEwWENYNQ==",
+  "gcp_project_id": "practical-actor-473818-e5",
+  "fivetran": {
+    "group_id": "anointer_indexes"
+  }
+}

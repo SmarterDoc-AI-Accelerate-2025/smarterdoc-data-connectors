@@ -1,0 +1,10 @@
+{
+  "bq_project": "practical-actor-473818-e5",
+  "bq_dataset": "raw",
+  "bq_profile_table": "doctor_profiles",
+  "gcp_location": "us-central1",
+  "embedding_model": "gemini-embedding-001",
+  "vector_attribute_name": "embedding",
+  "embedding_dimension": "3072",
+  "batch_size": "50"
+}
